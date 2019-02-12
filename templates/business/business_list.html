@@ -1,0 +1,8 @@
+<h1>Business</h1>
+<ul>
+{% for business in object_list %}
+    <li>{{ business.name }}</li>
+{% empty %}
+    <li>Empty list.</li>
+{% endfor %}
+</ul>
