@@ -1,8 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <h1>Business</h1>
-<ul>
-{% for business in object_list %}
-    <li>{{ business.name }}</li>
-{% empty %}
-    <li>Empty list.</li>
-{% endfor %}
-</ul>
+<div class="row">
+<div class="col-md-12">
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>&nbsp;</td>
+        </tr>
+    </thead>
+    <tbody>
+    {% for business in object_list %}
+    <tr>
+        <td>{{ business.name }}</td>
+         
+        <td><a href="{% url 'business:detail' business.id %}">View</a></td>
+        
+    </tr>
+    {% empty %}
+    <tr><td>Empty list.</td></tr>        
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+</div>
+{% endblock %}

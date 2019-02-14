@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/><br/>
+<div class="row">
+<div class="col-sm-12">
+<div class="card">
+    <div class="card-header">
+    {{ object.name }} - {{ object.created_date }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">ID: {{ object.id }}</h5>
+        <p class="card-text">
+        Tax id: {{ object.tax_id }}
+        </p>
+        <p class="card-text">
+        Address: {{ object.address }}
+        </p>
+        <p class="card-text">
+        City: {{ object.city }}
+        </p>
+        <p class="card-text">
+        State: {{ object.state }}
+        </p>
+        <p class="card-text">
+        Zipcode: {{ object.zipcode }}
+        </p>
+        <p class="card-text">
+        Phone: {{ object.phone }}
+        </p>
+        <p class="card-text">
+        Web: {{ object.web }}
+        </p>
+        <p class="card-text">
+        Fax: {{ object.fax }}
+        </p>
+        <p class="card-text">
+        Email: {{ object.email }}
+        </p>
+
+      <a href="{% url 'business:list' %}" class="btn btn-primary">Return</a>
+      <a href="{% url 'business:list' %}" class="btn btn-secondary">Edit</a>
+      <a href="{% url 'business:list' %}" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}
