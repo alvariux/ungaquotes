@@ -3,7 +3,7 @@
 {% block content %}
 <br/><br/>
 <div class="row">
-<div class="col-sm-12">
+<div class="col-md-12">
 <div class="card">
     <div class="card-header">
     {{ object.name }} - {{ object.created_date }}
@@ -39,8 +39,8 @@
         </p>
 
       <a href="{% url 'business:list' %}" class="btn btn-primary">Return</a>
-      <a href="{% url 'business:list' %}" class="btn btn-secondary">Edit</a>
-      <a href="{% url 'business:list' %}" class="btn btn-danger">Delete</a>
+      <a href="{% url 'business:update' object.pk %}" class="btn btn-secondary">Edit</a>
+      <a href="{% url 'business:delete' object.pk %}" class="btn btn-danger">Delete</a>
     </div>
 </div>
 </div>

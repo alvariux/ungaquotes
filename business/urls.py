@@ -6,6 +6,7 @@ app_name = 'business'
 urlpatterns = [
     path('', views.BusinessList.as_view(), name='list'),
     path('<int:pk>', views.BusinessDetail.as_view(), name='detail'),
-    #path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
-    #path('<int:question_id>/vote/', views.vote, name='vote'),
+    path('create', views.BusinessCreate.as_view(), name='create'),    
+    path('update/<int:pk>', views.BusinessUpdate.as_view(), name='update'),
+    path('detele/<int:pk>', views.BusinessDelete.as_view(), name='delete'),    
 ]

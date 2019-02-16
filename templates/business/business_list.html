@@ -16,7 +16,11 @@
     <tr>
         <td>{{ business.name }}</td>
          
-        <td><a href="{% url 'business:detail' business.id %}">View</a></td>
+        <td>
+            <a href="{% url 'business:detail' business.pk %}" class="btn btn-primary">View</a>
+            <a href="{% url 'business:update' business.pk %}" class="btn btn-secondary">Edit</a>
+            <a href="{% url 'business:delete' business.pk %}" class="btn btn-danger">Delete</a>
+        </td>
         
     </tr>
     {% empty %}
