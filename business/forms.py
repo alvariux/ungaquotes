@@ -30,3 +30,16 @@ class BusinessForm(forms.ModelForm):
             'fax':'Fax',
             'email':'Email',
         }
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class':'form-control'}),
+            'tax_id': forms.TextInput(attrs={'class':'form-control'}),
+            'address': forms.TextInput(attrs={'class':'form-control'}),
+            'city': forms.TextInput(attrs={'class':'form-control'}),
+            'state': forms.TextInput(attrs={'class':'form-control'}),
+            'zipcode': forms.TextInput(attrs={'class':'form-control'}),
+            'phone': forms.TextInput(attrs={'class':'form-control'}),
+            'web': forms.TextInput(attrs={'class':'form-control'}),
+            'fax': forms.TextInput(attrs={'class':'form-control'}),
+            'email': forms.TextInput(attrs={'class':'form-control'}),
+        }

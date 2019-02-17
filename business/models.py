@@ -11,7 +11,7 @@ class Business(models.Model):
     phone = models.CharField(max_length=200,blank=True, null=True)
     web = models.CharField(max_length=200,blank=True, null=True)
     fax = models.CharField(max_length=200,blank=True, null=True)
-    email = models.CharField(max_length=200,blank=True, null=True)
+    email = models.EmailField(max_length=200,blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
